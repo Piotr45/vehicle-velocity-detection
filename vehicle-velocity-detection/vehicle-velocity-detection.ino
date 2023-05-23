@@ -141,7 +141,7 @@ void loop() {
           }
           else if ((temp == 0xD8) & (temp_last == 0xFF)) {
             is_header = true;
-            Serial.println(F("ACK IMG END"));
+            // Serial.println(F("ACK IMG END"));
             Serial.write(temp_last);
             Serial.write(temp);
           }
@@ -185,7 +185,7 @@ uint8_t read_fifo_burst(ArduCAM myCAM){
     }
     else if ((temp == 0xD8) & (temp_last == 0xFF)) {
       is_header = true;
-      Serial.println(F("ACK IMG END"));
+      // Serial.println(F("ACK IMG END"));
       Serial.write(temp_last);
       Serial.write(temp);
     }
